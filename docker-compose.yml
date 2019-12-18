@@ -1,0 +1,31 @@
+version: "3"
+services:
+  php:
+    build:
+      context: ./docker/php/
+      dockerfile: Dockerfile
+    environment:
+      - TZ=Asia/Tokyo
+      - APACHE_LOG_DIR=/var/log/apache2
+    volumes:
+      - ../SRC:/var/www/html/public
+      - .:/app
+      - ./logs/php:/var/log/php
+      - ./logs/apache:/var/log/httpd
+      - ./docker/php/php.ini:/etc/php.ini
+      - ./docker/httpd/httpd.conf:/etc/httpd/conf/httpd.conf
+      - ./docker/httpd/welcome.conf:/etc/httpd/conf.d/welcome.conf
+    ports:
+      - 17580:80
+  logger:
+    image: httpd
+    volumes:
+      - ./logs:/usr/local/apache2/htdocs
+    ports:
+      - 17581:80
+  dozzle:
+    image: amir20/dozzle
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+       - 17582:8080

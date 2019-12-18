@@ -1,0 +1,36 @@
+[Wed Dec 18 18:26:17 2019] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Dec 18 18:26:17 2019] [notice] Digest: generating secret for digest authentication ...
+[Wed Dec 18 18:26:17 2019] [notice] Digest: done
+[Wed Dec 18 18:26:17 2019] [notice] Apache/2.2.15 (Unix) DAV/2 PHP/5.3.3 configured -- resuming normal operations
+[Wed Dec 18 18:26:23 2019] [crit] [client 172.30.0.1] configuration error:  couldn't perform authentication. AuthType not set!: /
+[Wed Dec 18 18:28:03 2019] [crit] [client 172.30.0.1] configuration error:  couldn't perform authentication. AuthType not set!: /
+[Wed Dec 18 18:30:17 2019] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Dec 18 18:30:17 2019] [notice] Digest: generating secret for digest authentication ...
+[Wed Dec 18 18:30:17 2019] [notice] Digest: done
+[Wed Dec 18 18:30:17 2019] [notice] Apache/2.2.15 (Unix) DAV/2 PHP/5.3.3 configured -- resuming normal operations
+[Wed Dec 18 18:30:35 2019] [error] [client 172.31.0.1] Directory index forbidden by Options directive: /var/www/html/public/
+[Wed Dec 18 18:31:04 2019] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+Warning: DocumentRoot [/var/www/html/public] does not exist
+[Wed Dec 18 18:31:04 2019] [notice] Digest: generating secret for digest authentication ...
+[Wed Dec 18 18:31:04 2019] [notice] Digest: done
+[Wed Dec 18 18:31:04 2019] [notice] Apache/2.2.15 (Unix) DAV/2 PHP/5.3.3 configured -- resuming normal operations
+[Wed Dec 18 18:31:46 2019] [error] [client 172.31.0.1] File does not exist: /var/www/html/public
+[Wed Dec 18 18:31:50 2019] [error] [client 172.31.0.1] File does not exist: /var/www/html/public
+[Wed Dec 18 18:32:29 2019] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Dec 18 18:32:29 2019] [notice] Digest: generating secret for digest authentication ...
+[Wed Dec 18 18:32:29 2019] [notice] Digest: done
+[Wed Dec 18 18:32:29 2019] [notice] Apache/2.2.15 (Unix) DAV/2 PHP/5.3.3 configured -- resuming normal operations
+[Wed Dec 18 18:32:58 2019] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Dec 18 18:32:58 2019] [notice] Digest: generating secret for digest authentication ...
+[Wed Dec 18 18:32:58 2019] [notice] Digest: done
+[Wed Dec 18 18:32:58 2019] [notice] Apache/2.2.15 (Unix) DAV/2 PHP/5.3.3 configured -- resuming normal operations
+[Wed Dec 18 18:33:00 2019] [error] [client 192.168.0.1] Directory index forbidden by Options directive: /var/www/html/public/
+[Wed Dec 18 18:34:10 2019] [error] [client 192.168.0.1] Directory index forbidden by Options directive: /var/www/html/public/
+[Wed Dec 18 18:35:36 2019] [error] [client 192.168.0.1] Directory index forbidden by Options directive: /var/www/html/public/
+[Wed Dec 18 18:40:32 2019] [error] [client 192.168.0.1] Directory index forbidden by Options directive: /var/www/html/public/
+[Wed Dec 18 18:46:06 2019] [notice] suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Dec 18 18:46:06 2019] [notice] Digest: generating secret for digest authentication ...
+[Wed Dec 18 18:46:06 2019] [notice] Digest: done
+[Wed Dec 18 18:46:06 2019] [notice] Apache/2.2.15 (Unix) DAV/2 PHP/5.3.3 configured -- resuming normal operations
+[Wed Dec 18 18:46:12 2019] [error] Access to file /var/www/html/public/inquiry/.htaccess denied by server: not a regular file
+[Wed Dec 18 18:46:12 2019] [crit] [client 192.168.32.1] (9)Bad file descriptor: /var/www/html/public/inquiry/.htaccess pcfg_openfile: unable to check htaccess file, ensure it is readable
