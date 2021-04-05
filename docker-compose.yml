@@ -8,7 +8,8 @@ services:
       - TZ=Asia/Tokyo
       - APACHE_LOG_DIR=/var/log/apache2
     volumes:
-      - ../SRC:/var/www/html/public
+#      - ../handicraft-articles-search:/var/www/html/public
+      - ../handicraft-articles-search:/var/www/html
       - .:/app
       - ./logs/php:/var/log/php
       - ./logs/apache:/var/log/httpd

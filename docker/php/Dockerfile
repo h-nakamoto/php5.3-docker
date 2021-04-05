@@ -1,30 +1,15 @@
-FROM centos:6.9
+# PHP7.x関係ではMDB2が文法エラーを起こし動作しない。
+FROM php:5.6-apache
 
-ENV PHP_VERSION 5.3.3
+# MySQL 拡張とMDB2 をインストール
+RUN apt-get update && \
+    docker-php-ext-install pdo_mysql mysql && \
+    pear channel-update pear.php.net && \
+    pear install MDB2#mysql && \
+    pecl install xdebug-2.5.5
 
-RUN yum install -y \
-        php \
-        php-mbstring \
-        php-pgsql \
-        php-mysql \
-        php-gd \
-        zip \
-        unzip \
-        git \
-        httpd \
-        php-devel \
-        httpd-devel \
-        php-pear \
-        gcc && \
-    yum clean all
+RUN a2enmod rewrite
 
-RUN curl -sS https://getcomposer.org/installer | php && \
-    mv composer.phar /usr/local/bin/composer && \
-    curl https://get.fuelphp.com/oil | sh
-
-RUN mkdir /app
-WORKDIR /app
-
-EXPOSE 80
-
-CMD ["/usr/sbin/apachectl","-DFOREGROUND"]
+# 設定ファイルを所定の位置にコピー
+COPY php.ini /usr/local/etc/php
+COPY 001-my.conf /etc/apache2/sites-enabled
